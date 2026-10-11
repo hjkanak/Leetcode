@@ -31,3 +31,22 @@ public:
         return dp[n];
     }
 };
+
+
+===========
+
+class Solution {
+public:
+
+    
+    int climbStairs(int n) {
+        if(n==1) return 1;
+        int prev=2,prepr=1;
+        for(int i=3;i<=n;i++){
+            int temp=prev+prepr;
+            prepr=prev;
+            prev=temp;
+        }
+        return prev;
+    }
+};
